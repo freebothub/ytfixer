@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light dark"/>
+<title>AdSense PIN Not Received: Fix & Verify Address</title>
+<meta name="description" content="Your AdSense PIN hasn't arrived? Learn when it is mailed, how long to wait, how to request a replacement, and how to verify your address so you get paid."/>
+<link rel="canonical" href="https://freebothub.github.io/ytfixer/adsense-pin-not-received-fix.html"/>
+<meta property="og:title" content="AdSense PIN Not Received: Fix & Verify Address"/>
+<meta property="og:description" content="Your AdSense PIN hasn't arrived? Learn when it is mailed, how long to wait, how to request a replacement, and how to verify your address so you get paid."/>
+<meta property="og:url" content="https://freebothub.github.io/ytfixer/adsense-pin-not-received-fix.html"/>
+<meta property="og:type" content="article"/>
+<link rel="icon" href="data:,"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --surface2:#efefec; --ink:#16130f; --muted:#5c564e; --line:#ddd9d2;
+  --red:#e10600; --red-dark:#b00500; --red-soft:#fdeceb; --green:#177245; --green-soft:#e6f4ec;
+  --amber:#9a6a00; --amber-soft:#fdf3d7; --radius:14px; --shadow:0 18px 50px rgba(22,19,15,.14);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121110; --surface:#1c1a18; --surface2:#262320; --ink:#f3efe9; --muted:#b3aca2; --line:#35312d;
+  --red:#ff3b30; --red-dark:#ff6b64; --red-soft:#3a1714; --green:#4cc38a; --green-soft:#173527; --amber:#f5c04a; --amber-soft:#3a2f10; --shadow:0 18px 50px rgba(0,0,0,.5);}
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit} .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* NAV */
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;padding:13px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;text-decoration:none;letter-spacing:-.03em}
+.logo span{color:var(--red)}
+.nav nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav nav a{text-decoration:none;font-weight:600;font-size:14.5px;padding:8px 11px;border-radius:999px;color:var(--muted)}
+.nav nav a:hover{color:var(--ink);background:var(--surface2)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff !important;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;border:1px solid var(--red);cursor:pointer;font-size:15px}
+.btn:hover{background:var(--red-dark)}
+.btn.ghost{background:transparent;color:var(--ink) !important;border-color:var(--line)}
+.btn.ghost:hover{background:var(--surface2)}
+.btn.small{padding:8px 15px;font-size:14px}
+@media(max-width:760px){.nav nav a:not(.keep){display:none}}
+
+/* HERO */
+.hero{padding:56px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--red-soft);color:var(--red);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(38px,6vw,64px);margin:16px 0 14px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:56ch;margin:0 0 22px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:34px 0 8px}
+@media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px}
+.fact b{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;display:block;line-height:1}
+.fact span{font-size:12.5px;color:var(--muted);font-weight:600}
+.diag{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.diag-head{background:var(--ink);color:var(--bg);padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.diag-head b{font-family:"Bricolage Grotesque",sans-serif}
+.diag-head span{font-size:11px;font-weight:700;background:var(--red);color:#fff;padding:3px 9px;border-radius:999px;letter-spacing:.06em}
+.diag-body{padding:18px}
+.diag-row{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.diag-row:last-of-type{border-bottom:0}
+.dot{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.dot.bad{background:var(--red-soft);color:var(--red)} .dot.ok{background:var(--green-soft);color:var(--green)} .dot.warn{background:var(--amber-soft);color:var(--amber)}
+.diag-note{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* SECTIONS */
+section{padding:58px 0}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+h2.title{font-size:clamp(28px,4vw,40px);margin:8px 0 10px;font-weight:800}
+.sub{color:var(--muted);max-width:68ch;margin:0 0 26px;font-size:16.5px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+.card .score{float:right;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;background:var(--surface2);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14.5px}
+.card a.more{font-weight:700;color:var(--red);text-decoration:none;font-size:14.5px}
+.honest{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);padding:18px 22px;display:flex;gap:16px;flex-wrap:wrap}
+.honest b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.honest p{margin:4px 0 0;color:var(--muted);font-size:14.5px;max-width:75ch}
+
+/* CHECKER */
+.checker{background:var(--ink);color:var(--bg);border-radius:22px;padding:30px}
+.checker h2{color:var(--bg);margin-top:0}
+.checker .sub{color:color-mix(in srgb, var(--bg) 72%, transparent)}
+.q{padding:15px 0;border-top:1px solid color-mix(in srgb, var(--bg) 18%, transparent);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.q p{margin:0;font-weight:600;font-size:15.5px;max-width:62ch}
+.yn{display:flex;gap:8px;flex:none}
+.yn button{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb, var(--bg) 40%, transparent);padding:8px 18px;border-radius:999px;font-weight:700;cursor:pointer;font-size:14px}
+.yn button.sel{background:var(--red);border-color:var(--red);color:#fff}
+.yn button.sel.good{background:var(--green);border-color:var(--green)}
+#checkResult{display:none;margin-top:22px;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:22px}
+#checkResult h3{margin:0 0 6px;font-size:22px}
+#checkResult p{color:var(--muted);margin:0 0 14px}
+.meter{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden;margin:10px 0 16px}
+.meter i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .5s}
+.progress-note{font-size:13.5px;opacity:.75;margin-top:14px}
+
+/* TIMELINE */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tl{grid-template-columns:1fr}}
+.tl .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tl .step b{font-family:"Bricolage Grotesque",sans-serif;font-size:26px;color:var(--red);display:block}
+.tl .step h3{margin:4px 0 6px;font-size:17px}
+.tl .step p{margin:0;color:var(--muted);font-size:14px}
+
+/* BLOG */
+.blog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.blog-tools input{flex:1;min-width:210px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:15px;font-family:inherit}
+.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600;cursor:pointer;font-size:13.5px;color:var(--muted);font-family:inherit}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:left;font-family:inherit;color:inherit;padding:0;width:100%}
+.post:hover{border-color:var(--red)}
+.post .thumb{height:118px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;line-height:1.15}
+.post .body{padding:17px 18px 19px;display:flex;flex-direction:column;gap:7px;flex:1}
+.post .meta{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--red)}
+.post h3{margin:0;font-size:19px}
+.post p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.post .read{font-weight:700;font-size:14px;color:var(--red)}
+.t1{background:#8f0400}.t2{background:#1d4d33}.t3{background:#7a4d00}.t4{background:#20304d}.t5{background:#4d2050}.t6{background:#0f4d4a}.t7{background:#5c1a1a}.t8{background:#333d12}
+
+/* ARTICLE READER */
+#reader{display:none;position:fixed;inset:0;z-index:90;background:var(--bg);overflow-y:auto}
+#reader.open{display:block}
+.reader-wrap{max-width:760px;margin:0 auto;padding:28px 20px 90px}
+.reader-wrap .back{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink)}
+.reader-wrap h1{font-size:clamp(30px,5vw,44px);margin:22px 0 8px}
+.reader-meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.article-body{font-size:17px}
+.article-body h2{font-size:24px;margin:30px 0 8px}
+.article-body p{margin:0 0 15px}
+.article-body ul,.article-body ol{margin:0 0 15px;padding-left:22px}
+.article-body li{margin-bottom:7px}
+.article-body strong{font-weight:700}
+.cta-box{background:var(--red-soft);border:1px solid color-mix(in srgb, var(--red) 35%, transparent);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.cta-box h3{margin:0 0 6px;font-size:20px}
+.cta-box p{margin:0 0 13px !important;color:var(--muted);font-size:15px}
+
+/* PRICING */
+.price-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.price-card.hot{border:2px solid var(--red)}
+.price-card .amt{font-family:"Bricolage Grotesque",sans-serif;font-size:42px;font-weight:800}
+.price-card .amt small{font-size:15px;color:var(--muted);font-family:"Public Sans",sans-serif;font-weight:600}
+.price-card ul{padding-left:19px;color:var(--muted);font-size:14.5px;flex:1}
+.price-card .tag{align-self:flex-start;background:var(--red);color:#fff;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;letter-spacing:.05em;margin-bottom:10px}
+
+/* FAQ */
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;font-size:16px}
+details p{color:var(--muted);margin:10px 0 2px;font-size:15px}
+
+/* POPUP */
+#popup{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,8,6,.55);padding:18px;align-items:flex-end;justify-content:center}
+@media(min-width:700px){#popup{align-items:center}}
+#popup.open{display:flex}
+.pop{background:var(--surface);color:var(--ink);border-radius:20px;max-width:520px;width:100%;padding:28px;box-shadow:var(--shadow);position:relative;max-height:88vh;overflow-y:auto}
+.pop .x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);cursor:pointer;font-size:16px;color:var(--ink)}
+.pop h3{font-size:26px;margin:6px 0 8px;padding-right:30px}
+.pop p{color:var(--muted);margin:0 0 14px;font-size:15px}
+.pop ul{padding-left:19px;color:var(--muted);font-size:14.5px;margin:0 0 18px}
+.pop .row{display:flex;gap:10px;flex-wrap:wrap}
+.pop .later{background:none;border:0;color:var(--muted);font-weight:600;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:14px;padding:11px 4px}
+#helpFab{position:fixed;right:16px;bottom:16px;z-index:70;display:none}
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px;margin-bottom:20px}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer a{color:var(--muted)}
+.final{background:var(--red);color:#fff;border-radius:22px;padding:36px;text-align:center}
+.final h2{color:#fff;margin:0 0 8px;font-size:clamp(26px,4vw,38px)}
+.final p{opacity:.92;margin:0 auto 20px;max-width:56ch}
+.final .btn{background:#fff;color:var(--red) !important;border-color:#fff}
+</style>
+<style>
+/* Article additions */
+header{background:var(--ink);color:var(--bg);border-bottom:1px solid var(--ink)}
+header .logo{color:var(--bg)}
+header .nav nav a{color:color-mix(in srgb, var(--bg) 75%, transparent)}
+header .nav nav a:hover{color:var(--bg);background:rgba(255,255,255,.12)}
+.article{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+.article h1{font-size:clamp(30px,5vw,44px);margin:18px 0 10px}
+.article h2{font-size:26px;margin:32px 0 10px}
+.article h3{font-size:20px;margin:24px 0 8px}
+.article p{margin:0 0 15px;font-size:17px}
+.article ul,.article ol{margin:0 0 15px;padding-left:22px;font-size:17px}
+.article li{margin-bottom:7px}
+.breadcrumb{font-size:14px;color:var(--muted);margin-bottom:6px}
+.breadcrumb a{color:var(--red);font-weight:700;text-decoration:none}
+.article-meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.cta-box{background:var(--red-soft);border:1px solid color-mix(in srgb, var(--red) 35%, transparent);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.cta-box h3{margin:0 0 6px;font-size:20px}
+.cta-box p{margin:0 0 13px !important;color:var(--muted);font-size:15px}
+.related{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.related h3{margin-top:0}
+.author{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:16px;margin-top:32px}
+@media(max-width:760px){.article h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">YT<span>Fixer</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#blog">Guides</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#faq">FAQ</a>
+    <a class="btn small keep" href="mailto:tanveersattar009@gmail.com?subject=I%20need%20help%20with%20my%20YouTube%20channel">&#9993; Mail the Team</a>
+  </nav>
+</div></header>
+<main class="article">
+
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="index.html#blog">Guides</a> &rsaquo; AdSense PIN Not Received? How to Verify Your Address and Get Paid</nav>
+<h1>AdSense PIN Not Received? How to Verify Your Address and Get Paid</h1>
+<p class="article-meta">Guide &middot; Updated November 2026 &middot; About 8 min read &middot; by the YTFixer Team</p>
+
+<p>You joined the YouTube Partner Program, your earnings passed $10, and Google said your AdSense PIN was on its way. Then weeks went by and no letter arrived. Do not panic, and do not start over with a new account. The PIN is sent by ordinary post and takes weeks to arrive, and a missing letter is one of the most common AdSense problems creators face. This guide explains what the PIN is, when it is mailed, how long to wait, how to check your address, how to request a replacement, and the deadlines you must not miss. One warning first: nobody from Google or YouTube will ever ask you for your password, your PIN, or a payment to &ldquo;release&rdquo; your earnings. Anyone who does is a scammer.</p>
+
+<h2>What the AdSense PIN is and why you need it</h2>
+<p>The AdSense PIN is a six-digit code that Google mails to the payment address on your AdSense account. It proves that the address on your account is real and that you can receive mail there. You must enter the PIN in your AdSense account before Google will pay you. Until the address is verified, your earnings keep building up, but no payment is sent. Do not share the PIN, post a photo of the letter online, or enter it on any website other than your own AdSense account.</p>
+
+<h2>When your PIN is mailed</h2>
+<p>Your PIN is mailed automatically when your AdSense balance reaches the $10 verification threshold. There is nothing to click to trigger it, and it is not sent when you join the YouTube Partner Program &mdash; only when your earnings reach $10. So first check your balance: if you have not reached $10 yet, no PIN has been sent. The letter goes to the payment address saved in your AdSense account, so that address must be exactly right &mdash; your real name, house number, street, town, and postcode, written the way your local post office expects it. A small mistake in the address is one of the most common reasons a PIN never arrives.</p>
+
+<h2>How long it takes &mdash; and when to worry</h2>
+<p>The PIN takes 3 to 4 weeks to arrive by regular mail. Delivery times vary by country, and a letter can be delayed by holidays, bad weather, or a slow local post office. Waiting is normal, and requesting a replacement after a few days is too soon. Wait the full 3 to 4 weeks from the date the PIN was mailed before you decide it is lost. If it still has not arrived after 4 weeks, check your address and request a replacement. Do not wait for months: you only have 4 months from the date the first PIN was mailed to enter a PIN, and if that deadline passes without a verified address, the ads on your channel can be disabled.</p>
+
+<h2>First, check your address and account details</h2>
+<p>Before you request a replacement, make sure the next letter will go to the right place:</p>
+<ol>
+<li><strong>Open your AdSense account and check your payment address.</strong> Go to Payments, then Settings, and read the address line by line. Is your name spelled correctly? Is the house or apartment number there? Is the town and postcode right?</li>
+<li><strong>Fix any mistake before you request a replacement</strong>, so the new PIN goes to the right place. A replacement sent to the same wrong address will go missing the same way.</li>
+<li><strong>Check that the account is in your name.</strong> You can only have one AdSense account per payee, and for YouTube creators the account must be created in YouTube Studio. Do not create a second account to get a new PIN &mdash; a duplicate can cause serious problems with your payments.</li>
+<li><strong>Ask at home and at your local post office.</strong> Check whether anyone in your household picked up the letter, and ask your post office whether mail from Google has arrived or is being held.</li>
+</ol>
+
+<h2>Step-by-step: requesting a replacement PIN</h2>
+<p>If the PIN still has not arrived after 4 weeks and your address is correct, request a replacement from inside AdSense:</p>
+<ol>
+<li><strong>Wait the full 3 to 4 weeks</strong> from the date the first PIN was mailed.</li>
+<li><strong>Correct your address first</strong> if you found any mistake in the checks above.</li>
+<li><strong>Sign in to AdSense</strong> and go to the address verification section, where you can request a replacement PIN.</li>
+<li><strong>Request the replacement</strong> and note the date.</li>
+<li><strong>Wait another 3 to 4 weeks</strong> for the replacement to arrive by post.</li>
+<li><strong>Enter the PIN exactly as printed</strong>, with no extra spaces. Double-check every digit before you submit it.</li>
+</ol>
+<p>If the replacement also fails to arrive, check your address once more and request another replacement. Keep track of the 4-month deadline &mdash; the clock runs from the date the first PIN was mailed, not from the date of the latest replacement.</p>
+
+<h2>The 4-month deadline and the 3-strike rule</h2>
+<p>These two limits catch creators out, so know them before you type anything. First, you have 4 months from the date your first PIN was mailed to enter a PIN and verify your address. If the 4 months pass without a verified address, the ads on your channel can be disabled, which stops your earnings. Second, entering the wrong PIN three times can also lead to your ads being disabled. So never guess: if you are unsure of a digit, look at the letter again. Type the code slowly, check each digit against the letter, and only then submit it. If the letter is damaged or unclear, request a replacement instead of guessing.</p>
+
+<h2>What to do if you moved or your address is wrong</h2>
+<p>If you moved house after your PIN was mailed, the letter went to your old address. Update your payment address in your AdSense account to your current address, then request a replacement PIN so the new letter goes to the right place. The same applies if you spot a mistake in the address: a missing apartment number, a misspelled street, a wrong postcode. Correct it first, then request the replacement. Do not use someone else&rsquo;s name on the account &mdash; the payee name must be yours, because you can only have one AdSense account per payee.</p>
+
+<h2>After verification: getting paid</h2>
+<p>Once you enter the correct PIN, your address is verified and that step is done for good. Your earnings are then paid out through the payment method saved in your AdSense account, once your balance reaches the payment threshold. Keep your bank details up to date in AdSense so a payment does not fail for an old account number. And one caution: if you ever need to change the AdSense account linked to your YouTube channel, you can only do that once per 32 days, and the change must be made in YouTube Studio. So do not rush into switching accounts because a PIN is late &mdash; a replacement PIN is the fix, not a new account.</p>
+
+<h2>Checklist: getting your PIN and getting paid</h2>
+<ul>
+<li>Your AdSense balance has reached the $10 verification threshold &mdash; otherwise no PIN has been mailed yet.</li>
+<li>Your payment address in AdSense is complete and exactly right.</li>
+<li>You waited the full 3 to 4 weeks before deciding the PIN is lost.</li>
+<li>You requested a replacement PIN from inside your AdSense account, not from any other website.</li>
+<li>You know your 4-month deadline, counted from the date the first PIN was mailed.</li>
+<li>You enter the PIN exactly as printed, and never guess a digit.</li>
+<li>You have not created a second AdSense account &mdash; one account per payee.</li>
+<li>Your bank details in AdSense are up to date for when payments start.</li>
+<li>You have never shared your password or PIN with anyone, and never will.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<details><summary>How long does the AdSense PIN take to arrive?</summary><p>The PIN is sent by regular post and takes 3 to 4 weeks to arrive. Wait the full 3 to 4 weeks before requesting a replacement. If it still has not arrived after 4 weeks, check your address and request one from inside your AdSense account.</p></details>
+<details><summary>I have not reached $10 yet. Where is my PIN?</summary><p>It has not been mailed. The PIN is only sent automatically once your AdSense balance reaches the $10 verification threshold. Until it reaches $10, there is no PIN to wait for and nothing is missing.</p></details>
+<details><summary>Can I request a new PIN if mine never arrived?</summary><p>Yes. If the PIN has not arrived after 3 to 4 weeks, check that your payment address in AdSense is correct, then request a replacement from the address verification section. The replacement takes another 3 to 4 weeks to arrive.</p></details>
+<details><summary>What happens if I enter the wrong PIN?</summary><p>Entering the wrong PIN three times can lead to the ads on your channel being disabled, so never guess. Type the code slowly and check each digit against the letter. If the letter is damaged or unclear, request a replacement instead of using up an attempt on a guess.</p></details>
+<details><summary>Can I make a second AdSense account to get a new PIN?</summary><p>No. You can only have one AdSense account per payee, and for YouTube creators the account must be created in YouTube Studio. If your PIN is lost, use the replacement process in your existing account.</p></details>
+
+<div class="related"><h3>Related guides</h3><ul><li><a href="adsense-step-2-stuck-fix.html">AdSense Step 2 Stuck? How to Fix It</a></li><li><a href="youtube-monetization-requirements-2027.html">YPP Changes on 1 February 2027: The 8,000-Hour Rule</a></li><li><a href="youtube-monetization-pre-application-checklist.html">Before You Hit Apply: The Pre-Application Checklist</a></li><li><a href="youtube-reused-content-appeal-script.html">YouTube Reused Content Appeal Script: What to Say</a></li></ul></div>
+
+<h2>What to do next</h2>
+<p>Check your balance first: if you have not reached $10, no PIN has been sent yet. If you have passed $10, check your payment address line by line, wait the full 3 to 4 weeks, and then request a replacement from inside AdSense if the letter still has not come. Keep an eye on your 4-month deadline, enter the code carefully when it arrives, and never share your password or PIN with anyone. If your AdSense setup has a deeper problem, an expert review can look at your exact setup and tell you what to do next.</p>
+
+<div class="cta-box"><h3>Want an expert YouTube team to look at your channel?</h3><p>Send us your channel link and a screenshot of the exact message AdSense or YouTube Studio is showing you. We will check your setup against the AdSense rules and tell you honestly what fixing it involves &mdash; before you pay anything. No passwords needed, ever.</p><a class="btn" href="mailto:tanveersattar009@gmail.com?subject=AdSense%20PIN%20Help">&#9993; Mail us: tanveersattar009@gmail.com</a></div>
+
+<p class="author">YTFixer Team &mdash; 8 November 2026</p>
+<p><a href="index.html">&larr; Back to YTFixer home</a></p>
+
+</main>
+<footer><div class="wrap">
+<p>YTFixer is not affiliated with YouTube or Google. YTFixer is an independent service and is not affiliated with, endorsed by, or connected to YouTube or Google. Policy summaries on this site are guidance based on YouTube&rsquo;s published policies at the time of writing &mdash; always check the current policy in YouTube Studio / YouTube Help. No service can guarantee acceptance into the YouTube Partner Program.</p>
+<p><a href="index.html">YTFixer home</a> &middot; <a href="mailto:tanveersattar009@gmail.com">tanveersattar009@gmail.com</a></p>
+</div></footer>
+</body>
+</html>
