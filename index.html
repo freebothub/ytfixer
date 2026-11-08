@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light dark"/>
+<meta name="description" content="YTFixer — expert help for YouTube monetization rejection, reused content audits, YPP appeals, AdSense problems and channel audits. Free guides, a free eligibility checker, and a real human audit team."/>
+<link rel="icon" href="data:,"/>
+<title>YTFixer — Fix YouTube Monetization Rejection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --surface2:#efefec; --ink:#16130f; --muted:#5c564e; --line:#ddd9d2;
+  --red:#e10600; --red-dark:#b00500; --red-soft:#fdeceb; --green:#177245; --green-soft:#e6f4ec;
+  --amber:#9a6a00; --amber-soft:#fdf3d7; --radius:14px; --shadow:0 18px 50px rgba(22,19,15,.14);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121110; --surface:#1c1a18; --surface2:#262320; --ink:#f3efe9; --muted:#b3aca2; --line:#35312d;
+  --red:#ff3b30; --red-dark:#ff6b64; --red-soft:#3a1714; --green:#4cc38a; --green-soft:#173527; --amber:#f5c04a; --amber-soft:#3a2f10; --shadow:0 18px 50px rgba(0,0,0,.5);}
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit} .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* NAV */
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;padding:13px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;text-decoration:none;letter-spacing:-.03em}
+.logo span{color:var(--red)}
+.nav nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav nav a{text-decoration:none;font-weight:600;font-size:14.5px;padding:8px 11px;border-radius:999px;color:var(--muted)}
+.nav nav a:hover{color:var(--ink);background:var(--surface2)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff !important;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;border:1px solid var(--red);cursor:pointer;font-size:15px}
+.btn:hover{background:var(--red-dark)}
+.btn.ghost{background:transparent;color:var(--ink) !important;border-color:var(--line)}
+.btn.ghost:hover{background:var(--surface2)}
+.btn.small{padding:8px 15px;font-size:14px}
+@media(max-width:760px){.nav nav a:not(.keep){display:none}}
+
+/* HERO */
+.hero{padding:56px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--red-soft);color:var(--red);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(38px,6vw,64px);margin:16px 0 14px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:56ch;margin:0 0 22px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:34px 0 8px}
+@media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px}
+.fact b{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;display:block;line-height:1}
+.fact span{font-size:12.5px;color:var(--muted);font-weight:600}
+.diag{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.diag-head{background:var(--ink);color:var(--bg);padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.diag-head b{font-family:"Bricolage Grotesque",sans-serif}
+.diag-head span{font-size:11px;font-weight:700;background:var(--red);color:#fff;padding:3px 9px;border-radius:999px;letter-spacing:.06em}
+.diag-body{padding:18px}
+.diag-row{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.diag-row:last-of-type{border-bottom:0}
+.dot{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.dot.bad{background:var(--red-soft);color:var(--red)} .dot.ok{background:var(--green-soft);color:var(--green)} .dot.warn{background:var(--amber-soft);color:var(--amber)}
+.diag-note{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* SECTIONS */
+section{padding:58px 0}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+h2.title{font-size:clamp(28px,4vw,40px);margin:8px 0 10px;font-weight:800}
+.sub{color:var(--muted);max-width:68ch;margin:0 0 26px;font-size:16.5px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+.card .score{float:right;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;background:var(--surface2);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14.5px}
+.card a.more{font-weight:700;color:var(--red);text-decoration:none;font-size:14.5px}
+.honest{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);padding:18px 22px;display:flex;gap:16px;flex-wrap:wrap}
+.honest b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.honest p{margin:4px 0 0;color:var(--muted);font-size:14.5px;max-width:75ch}
+
+/* CHECKER */
+.checker{background:var(--ink);color:var(--bg);border-radius:22px;padding:30px}
+.checker h2{color:var(--bg);margin-top:0}
+.checker .sub{color:color-mix(in srgb, var(--bg) 72%, transparent)}
+.q{padding:15px 0;border-top:1px solid color-mix(in srgb, var(--bg) 18%, transparent);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.q p{margin:0;font-weight:600;font-size:15.5px;max-width:62ch}
+.yn{display:flex;gap:8px;flex:none}
+.yn button{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb, var(--bg) 40%, transparent);padding:8px 18px;border-radius:999px;font-weight:700;cursor:pointer;font-size:14px}
+.yn button.sel{background:var(--red);border-color:var(--red);color:#fff}
+.yn button.sel.good{background:var(--green);border-color:var(--green)}
+#checkResult{display:none;margin-top:22px;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:22px}
+#checkResult h3{margin:0 0 6px;font-size:22px}
+#checkResult p{color:var(--muted);margin:0 0 14px}
+.meter{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden;margin:10px 0 16px}
+.meter i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .5s}
+.progress-note{font-size:13.5px;opacity:.75;margin-top:14px}
+
+/* TIMELINE */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tl{grid-template-columns:1fr}}
+.tl .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tl .step b{font-family:"Bricolage Grotesque",sans-serif;font-size:26px;color:var(--red);display:block}
+.tl .step h3{margin:4px 0 6px;font-size:17px}
+.tl .step p{margin:0;color:var(--muted);font-size:14px}
+
+/* BLOG */
+.blog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.blog-tools input{flex:1;min-width:210px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:15px;font-family:inherit}
+.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600;cursor:pointer;font-size:13.5px;color:var(--muted);font-family:inherit}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:left;font-family:inherit;color:inherit;padding:0;width:100%}
+.post:hover{border-color:var(--red)}
+.post .thumb{height:118px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;line-height:1.15}
+.post .body{padding:17px 18px 19px;display:flex;flex-direction:column;gap:7px;flex:1}
+.post .meta{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--red)}
+.post h3{margin:0;font-size:19px}
+.post p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.post .read{font-weight:700;font-size:14px;color:var(--red)}
+.t1{background:#8f0400}.t2{background:#1d4d33}.t3{background:#7a4d00}.t4{background:#20304d}.t5{background:#4d2050}.t6{background:#0f4d4a}.t7{background:#5c1a1a}.t8{background:#333d12}
+
+/* ARTICLE READER */
+#reader{display:none;position:fixed;inset:0;z-index:90;background:var(--bg);overflow-y:auto}
+#reader.open{display:block}
+.reader-wrap{max-width:760px;margin:0 auto;padding:28px 20px 90px}
+.reader-wrap .back{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink)}
+.reader-wrap h1{font-size:clamp(30px,5vw,44px);margin:22px 0 8px}
+.reader-meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.article-body{font-size:17px}
+.article-body h2{font-size:24px;margin:30px 0 8px}
+.article-body p{margin:0 0 15px}
+.article-body ul,.article-body ol{margin:0 0 15px;padding-left:22px}
+.article-body li{margin-bottom:7px}
+.article-body strong{font-weight:700}
+.cta-box{background:var(--red-soft);border:1px solid color-mix(in srgb, var(--red) 35%, transparent);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.cta-box h3{margin:0 0 6px;font-size:20px}
+.cta-box p{margin:0 0 13px !important;color:var(--muted);font-size:15px}
+
+/* PRICING */
+.price-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.price-card.hot{border:2px solid var(--red)}
+.price-card .amt{font-family:"Bricolage Grotesque",sans-serif;font-size:42px;font-weight:800}
+.price-card .amt small{font-size:15px;color:var(--muted);font-family:"Public Sans",sans-serif;font-weight:600}
+.price-card ul{padding-left:19px;color:var(--muted);font-size:14.5px;flex:1}
+.price-card .tag{align-self:flex-start;background:var(--red);color:#fff;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;letter-spacing:.05em;margin-bottom:10px}
+
+/* FAQ */
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;font-size:16px}
+details p{color:var(--muted);margin:10px 0 2px;font-size:15px}
+
+/* POPUP */
+#popup{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,8,6,.55);padding:18px;align-items:flex-end;justify-content:center}
+@media(min-width:700px){#popup{align-items:center}}
+#popup.open{display:flex}
+.pop{background:var(--surface);color:var(--ink);border-radius:20px;max-width:520px;width:100%;padding:28px;box-shadow:var(--shadow);position:relative;max-height:88vh;overflow-y:auto}
+.pop .x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);cursor:pointer;font-size:16px;color:var(--ink)}
+.pop h3{font-size:26px;margin:6px 0 8px;padding-right:30px}
+.pop p{color:var(--muted);margin:0 0 14px;font-size:15px}
+.pop ul{padding-left:19px;color:var(--muted);font-size:14.5px;margin:0 0 18px}
+.pop .row{display:flex;gap:10px;flex-wrap:wrap}
+.pop .later{background:none;border:0;color:var(--muted);font-weight:600;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:14px;padding:11px 4px}
+#helpFab{position:fixed;right:16px;bottom:16px;z-index:70;display:none}
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px;margin-bottom:20px}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer a{color:var(--muted)}
+.final{background:var(--red);color:#fff;border-radius:22px;padding:36px;text-align:center}
+.final h2{color:#fff;margin:0 0 8px;font-size:clamp(26px,4vw,38px)}
+.final p{opacity:.92;margin:0 auto 20px;max-width:56ch}
+.final .btn{background:#fff;color:var(--red) !important;border-color:#fff}
+</style>
+</head>
+<body>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#top">YT<span>Fixer</span></a>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#checker">Free Checker</a>
+    <a href="#blog">Blog &amp; Guides</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn small keep" href="mailto:tanveersattar009@gmail.com?subject=I%20need%20help%20with%20my%20YouTube%20channel">✉ Mail the Team</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<!-- HERO -->
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div>
+      <span class="pill">● YouTube monetization help — audits, appeals &amp; fixes</span>
+      <h1>Rejected from YouTube monetization? <em>Find the real reason. Fix it properly.</em></h1>
+      <p class="lead">Most rejections are not “bad luck.” They are a specific policy problem — reused content, inauthentic content, a weak appeal, or an AdSense step that was never finished. YTFixer diagnoses the exact problem, tells you what to change, and writes your appeal with you.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#checker">Run the free eligibility check →</a>
+        <a class="btn ghost" href="#blog">Read the free guides</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>21 days</b><span>Window to appeal a YPP rejection</span></div>
+        <div class="fact"><b>30 / 90 days</b><span>Wait before reapplying — 1st, then later rejections</span></div>
+        <div class="fact"><b>4,000 hrs</b><span>Watch hours needed now — rising to 8,000 on 1 Feb 2027</span></div>
+        <div class="fact"><b>10M → 20M</b><span>Shorts views threshold doubles 1 Feb 2027 for new applicants</span></div>
+      </div>
+    </div>
+    <div class="diag" aria-label="Example diagnosis">
+      <div class="diag-head"><b>What an audit actually checks</b><span>EXAMPLE</span></div>
+      <div class="diag-body">
+        <div class="diag-row"><span class="dot bad">✕</span><div><b>Reused content risk</b> — compilation videos with no added commentary, transformation or original value.</div></div>
+        <div class="diag-row"><span class="dot warn">!</span><div><b>Appeal strength</b> — appeal talks about effort, not about what changed on the channel.</div></div>
+        <div class="diag-row"><span class="dot bad">✕</span><div><b>AdSense Step 2</b> — identity / address verification left incomplete, payments paused.</div></div>
+        <div class="diag-row"><span class="dot ok">✓</span><div><b>Original content</b> — face, voice and editing clearly the creator’s own work.</div></div>
+        <div class="diag-row"><span class="dot ok">✓</span><div><b>Policy basics</b> — no active strikes, titles and thumbnails match the video.</div></div>
+        <p class="diag-note">This panel is an illustration of the checklist our team works through — your audit is done on your real channel, video by video.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HONEST BAR -->
+<div class="wrap" style="padding-bottom:6px">
+  <div class="honest"><div>✅</div><div><b>What we will never sell you</b><p>No bought subscribers, no fake views, no purchased watch time, no “guaranteed monetization.” Those break YouTube’s policies and get channels terminated. Everything here is policy-based: find the real problem, fix the content, make the honest case. No audit can promise YouTube will say yes — anyone who promises that is lying to you.</p></div></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <p class="kicker">Services</p>
+  <h2 class="title">Help for the problems creators actually get stuck on</h2>
+  <p class="sub">These are the six audits our research found creators urgently searching for — and the ones with the fewest honest specialists offering them.</p>
+  <div class="grid3">
+    <div class="card"><span class="score">Start here</span><h3>Reused Content Audit + Appeal</h3><p>Rejected for “reused content”? We review your videos against the actual policy, flag the exact videos putting you at risk, and draft an appeal that shows what you changed.</p><ul><li>Video-by-video risk list</li><li>What to edit, re-make or remove</li><li>Appeal script in your own facts</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=Reused%20Content%20Audit">Ask for this audit →</a></p></div>
+    <div class="card"><h3>Inauthentic Content Audit</h3><p>Mass-produced, repetitive or templated content is the other big rejection reason. We check whether your format looks “inauthentic” to a reviewer — and how to make it clearly yours.</p><ul><li>Format &amp; repetition review</li><li>Originality signals checklist</li><li>Fix plan before you reapply</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=Inauthentic%20Content%20Audit">Ask for this audit →</a></p></div>
+    <div class="card"><h3>Pre-Application Eligibility Audit</h3><p>Don’t burn your first application. Before you click Apply, we check thresholds, content risk, channel history and AdSense readiness — so you apply once, cleanly.</p><ul><li>Threshold &amp; watch-time check</li><li>Content risk scan</li><li>Go / not-yet verdict with reasons</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=Eligibility%20Audit">Ask for this audit →</a></p></div>
+    <div class="card"><h3>Appeal or Reapply? Decision Audit</h3><p>Appeal within 21 days, or fix and reapply after 30? Choosing wrong wastes months. We look at your rejection and your channel and give you the right route — with a dated plan.</p><ul><li>Appeal vs reapply verdict</li><li>21 / 30 / 90-day timeline</li><li>Fix list in priority order</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=Appeal%20or%20Reapply%20Audit">Ask for this audit →</a></p></div>
+    <div class="card"><h3>AdSense Linking &amp; Step 2 Help</h3><p>Stuck on AdSense Step 2, identity verification, PIN or “payments paused”? Guidance to find exactly where your setup is stuck and what document or step clears it. We never ask for your passwords.</p><ul><li>Step-by-step stuck-point diagnosis</li><li>PIN &amp; verification guidance</li><li>Duplicate-account pitfalls</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=AdSense%20Step%202%20Help">Ask for this help →</a></p></div>
+    <div class="card"><h3>Full Channel Audit — CTR, Retention, SEO</h3><p>Monetized but not growing? A diagnosis of titles, thumbnails, click-through rate, retention curves and metadata — what to fix first, in plain language. Diagnosis only: no fake engagement, ever.</p><ul><li>CTR &amp; retention reading</li><li>Title / thumbnail diagnosis</li><li>30-day content plan</li></ul><p style="margin-top:12px"><a class="more" href="mailto:tanveersattar009@gmail.com?subject=Full%20Channel%20Audit">Ask for this audit →</a></p></div>
+  </div>
+</div></section>
+
+<!-- CHECKER -->
+<section id="checker" style="padding-top:6px"><div class="wrap">
+  <div class="checker">
+    <p class="kicker" style="color:#ff8a84">Free · 2 minutes · No sign-up</p>
+    <h2 class="title">YPP Eligibility &amp; Risk Checker</h2>
+    <p class="sub">Answer honestly. This checks the things a YouTube reviewer will look at — it gives you a risk picture, not a verdict. Only YouTube decides applications.</p>
+    <div id="questions"></div>
+    <div class="progress-note" id="checkProgress">0 of 8 answered</div>
+    <div id="checkResult" role="status"></div>
+  </div>
+</div></section>
+
+<!-- TIMELINE -->
+<section style="padding-top:6px"><div class="wrap">
+  <p class="kicker">Know your dates</p>
+  <h2 class="title">Rejected? Your clock is already running</h2>
+  <p class="sub">The most expensive mistake is doing nothing while the windows close. Here is the timeline every rejected creator is on.</p>
+  <div class="tl">
+    <div class="step"><b>Day 0</b><h3>Rejection email arrives</h3><p>Read the exact policy named. “Reused content” and “inauthentic content” need different fixes — don’t guess.</p></div>
+    <div class="step"><b>21 days</b><h3>Appeal window</h3><p>You have 21 days to appeal. A good appeal is a short video showing your face, your process, and what changed — not a complaint.</p></div>
+    <div class="step"><b>30 days</b><h3>First reapply date</h3><p>If the appeal fails (or you skip it), you can reapply after 30 days — but only reapply after you have actually fixed the flagged content.</p></div>
+    <div class="step"><b>90 days</b><h3>Later reapplications</h3><p>After a second rejection the wait becomes 90 days. This is why the first fix has to be the right fix.</p></div>
+  </div>
+  <div class="honest" style="margin-top:18px"><div>📅</div><div><b>Coming 1 February 2027: the bar doubles</b><p>For new applicants, YPP thresholds rise to 8,000 watch hours (from 4,000) or 20M Shorts views (from 10M). Existing partners are not affected. If you are close to today’s thresholds, applying cleanly <em>before</em> the change matters — read the guide in the blog below.</p></div></div>
+</div></section>
+
+<!-- BLOG -->
+<section id="blog" style="padding-top:10px"><div class="wrap">
+  <p class="kicker">Blog &amp; Guides — free, no sign-up</p>
+  <h2 class="title">Guides written for stuck creators, not for algorithms</h2>
+  <p class="sub">Every guide explains the actual YouTube rule, the exact fix, and the dates that matter. New guides are added regularly. If a guide doesn’t solve your problem, the expert team is one email away — there’s a help box inside every article.</p>
+  <div class="blog-tools">
+    <input id="blogSearch" type="search" placeholder="Search guides — try “reused”, “AdSense”, “Shorts”…" aria-label="Search guides"/>
+    <button class="chip on" data-cat="all">All guides</button>
+    <button class="chip" data-cat="Monetization">Monetization</button>
+    <button class="chip" data-cat="Appeals">Appeals</button>
+    <button class="chip" data-cat="AdSense">AdSense</button>
+    <button class="chip" data-cat="Growth">Growth</button>
+    <button class="chip" data-cat="Policy">Policy</button>
+  </div>
+  <div class="grid3" id="postGrid"></div>
+  <p id="noPosts" style="display:none;color:var(--muted)">No guide matches that search yet. <a href="mailto:tanveersattar009@gmail.com?subject=Guide%20request" style="color:var(--red);font-weight:700">Ask us to write it →</a></p>
+</div></section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding-top:6px"><div class="wrap">
+  <p class="kicker">Pricing</p>
+  <h2 class="title">One clear price. No subscriptions, no upsell pressure.</h2>
+  <p class="sub">Pay per audit. You get a written report on your real channel, the exact fix list, and — on appeal packages — the appeal drafted with you. Payment details are confirmed by email before any work starts.</p>
+  <div class="grid3">
+    <div class="price-card"><h3>Eligibility Check</h3><div class="amt">$59 <small>one-time</small></div><ul><li>Threshold &amp; watch-time verification</li><li>Full content risk scan</li><li>AdSense readiness check</li><li>Go / not-yet verdict in writing</li><li>Delivered in 2–3 days</li></ul><a class="btn ghost" href="mailto:tanveersattar009@gmail.com?subject=Eligibility%20Check%20%2459">Start by email →</a></div>
+    <div class="price-card hot"><span class="tag">RECOMMENDED</span><h3>Rejection Fix + Appeal</h3><div class="amt">$99 <small>one-time</small></div><ul><li>Video-by-video rejection diagnosis</li><li>Exact fix list, in priority order</li><li>Appeal video script drafted with you</li><li>Appeal vs reapply decision + dates</li><li>One follow-up review included</li><li>Delivered in 3–4 days</li></ul><a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Rejection%20Fix%20%2B%20Appeal%20%2499">Start by email →</a></div>
+    <div class="price-card"><h3>Full Channel Audit</h3><div class="amt">$149 <small>one-time</small></div><ul><li>Everything in Eligibility Check</li><li>CTR, retention &amp; SEO diagnosis</li><li>Title &amp; thumbnail review</li><li>30-day content plan</li><li>30-minute results call</li><li>Delivered in 4–5 days</li></ul><a class="btn ghost" href="mailto:tanveersattar009@gmail.com?subject=Full%20Channel%20Audit%20%24149">Start by email →</a></div>
+  </div>
+  <p style="color:var(--muted);font-size:14px;margin-top:16px">Honest note: an audit improves your chances by fixing the real problem. It cannot guarantee YouTube’s decision — no one can. If we review your channel and find nothing we can genuinely help with, we tell you before charging you.</p>
+</div></section>
+
+<!-- HOW IT WORKS -->
+<section style="padding-top:6px"><div class="wrap">
+  <p class="kicker">How it works</p><h2 class="title">Four steps, all by email — no account, no password sharing</h2>
+  <div class="tl" style="margin-top:22px">
+    <div class="step"><b>1</b><h3>You email us</h3><p>Send your channel link and the rejection email text (screenshot is fine). Never send passwords — we never need them.</p></div>
+    <div class="step"><b>2</b><h3>We confirm scope &amp; price</h3><p>We reply with exactly what we’ll check, the fixed price, and the delivery date. No work starts until you say yes.</p></div>
+    <div class="step"><b>3</b><h3>You get the written audit</h3><p>Video-by-video findings, the fix list in priority order, your key dates, and your appeal draft where included.</p></div>
+    <div class="step"><b>4</b><h3>You fix, appeal, reapply</h3><p>You make the changes and submit. Appeal packages include one follow-up review of your fixed channel.</p></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:6px"><div class="wrap">
+  <p class="kicker">FAQ</p><h2 class="title">Questions every rejected creator asks</h2><div style="height:16px"></div>
+  <details><summary>Can you guarantee I’ll get monetized?</summary><p>No — and run from anyone who says yes. Only YouTube decides. What we guarantee is an honest, policy-based diagnosis: the real reason, the exact fixes, and a properly built appeal. That is the part actually in your control.</p></details>
+  <details><summary>My content is from other creators, but I have permission. Why was I rejected?</summary><p>Because “reused content” is a separate policy from copyright. Permission solves the copyright question — it does not make the content yours. YouTube wants significant original commentary, transformation or educational value added by you. Our reused content guide explains this in full.</p></details>
+  <details><summary>Should I appeal or just reapply after 30 days?</summary><p>Appeal if you genuinely fixed the problem and can show your creation process on camera within 21 days. Reapply if the channel still needs real changes — a rushed appeal that fails leaves you on the 30-day (then 90-day) clock anyway. This is the single most valuable decision we help with.</p></details>
+  <details><summary>I’m stuck on AdSense Step 2. Can you log in and fix it?</summary><p>We never ask for or use your passwords. We diagnose where you’re stuck — identity, address, PIN, duplicate account — and guide you step by step to clear it yourself, safely.</p></details>
+  <details><summary>Do you sell channels, subscribers or watch time?</summary><p>No. No channel sales, no subscribers, no views, no watch time. Those violate YouTube policy, put buyers’ channels at risk, and AdSense can never be transferred. We only do audits, guidance and honest growth diagnosis.</p></details>
+  <details><summary>What changes on 1 February 2027?</summary><p>For new YPP applicants, thresholds double: 8,000 watch hours (from 4,000) or 20M Shorts views in 90 days (from 10M), alongside 1,000 subscribers. Channels already in YPP are not affected. If you’re near today’s line, a clean application before the change is worth planning for.</p></details>
+  <details><summary>How do I start?</summary><p>Email <a href="mailto:tanveersattar009@gmail.com" style="color:var(--red);font-weight:700">tanveersattar009@gmail.com</a> with your channel link and what happened. We reply with scope, fixed price and delivery date — no obligation.</p></details>
+</div></section>
+
+<!-- FINAL CTA -->
+<div class="wrap" style="padding-bottom:60px">
+  <div class="final">
+    <h2>Stuck? Let an expert YouTube team look at your channel.</h2>
+    <p>Send us your channel link and your rejection message. You’ll get a straight answer about what’s wrong, what it costs to fix, and how long it takes — before you pay anything.</p>
+    <a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Please%20review%20my%20YouTube%20channel&body=My%20channel%3A%20%0AWhat%20happened%3A%20">✉ Mail us: tanveersattar009@gmail.com</a>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="#top" style="font-size:22px">YT<span>Fixer</span></a><p style="margin:10px 0 0;max-width:44ch">Independent YouTube monetization help: reused &amp; inauthentic content audits, YPP appeals, AdSense guidance and channel audits.</p></div>
+    <div><b style="color:var(--ink)">Guides</b><br><a href="#blog">Reused content, explained</a><br><a href="#blog">Appeal or reapply?</a><br><a href="#blog">AdSense Step 2 stuck</a><br><a href="#blog">1 Feb 2027 changes</a></div>
+    <div><b style="color:var(--ink)">Contact</b><br><a href="mailto:tanveersattar009@gmail.com">tanveersattar009@gmail.com</a><br><a href="#checker">Free eligibility checker</a><br><a href="#pricing">Audit pricing</a></div>
+  </div>
+  <p>YTFixer is an independent service and is <strong>not affiliated with, endorsed by, or connected to YouTube or Google</strong>. YouTube™ is a trademark of Google LLC. Policy summaries on this site are guidance based on YouTube’s published policies at the time of writing — always check the current policy in YouTube Studio / YouTube Help. No service can guarantee acceptance into the YouTube Partner Program.</p>
+</div></footer>
+
+<!-- ARTICLE READER -->
+<div id="reader" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="reader-wrap">
+    <button class="back" id="readerBack">← All guides</button>
+    <h1 id="readerTitle"></h1>
+    <div class="reader-meta" id="readerMeta"></div>
+    <div class="article-body" id="readerBody"></div>
+    <div class="cta-box"><h3>Want an expert YouTube team to look at your channel?</h3><p>Guides fix the common cases. If yours is different — or your appeal window is closing — mail us your channel link and rejection message for a straight, no-obligation diagnosis.</p><a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Please%20review%20my%20YouTube%20channel">✉ Mail us: tanveersattar009@gmail.com</a></div>
+  </div>
+</div>
+
+<!-- EXPERT HELP POPUP -->
+<div id="popup" role="dialog" aria-modal="true" aria-label="Expert help">
+  <div class="pop">
+    <button class="x" id="popClose" aria-label="Close">✕</button>
+    <span class="pill">⏰ Appeal windows close fast</span>
+    <h3>Want an expert YouTube team to help you?</h3>
+    <p>You don’t have to decode YouTube’s rejection email alone. Our team reviews channels every day for exactly this:</p>
+    <ul><li>Reused &amp; inauthentic content rejections</li><li>Appeals — inside your 21-day window</li><li>AdSense Step 2, PIN &amp; linking problems</li><li>Full channel audits with a fix plan</li></ul>
+    <div class="row">
+      <a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Please%20review%20my%20YouTube%20channel&body=My%20channel%3A%20%0AWhat%20happened%3A%20">✉ Mail us for help</a>
+      <button class="later" id="popLater">Not now</button>
+    </div>
+    <p style="font-size:12.5px;margin-top:12px">No passwords needed, ever. No bought subs or fake views — policy-based fixes only.</p>
+  </div>
+</div>
+<button id="helpFab" class="btn">✉ Get expert help</button>
+
+<script>
+var CTA = '<div class="cta-box"><h3>Stuck on your channel? Mail the YTFixer team.</h3><p>Send your channel link and the exact message YouTube sent you. We\u2019ll tell you honestly what the problem is and what fixing it involves — before you pay anything.</p><a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Please%20review%20my%20YouTube%20channel">\u2709 Mail us: tanveersattar009@gmail.com</a></div>';
+
+var POSTS = [
+{id:'reused-content', cat:'Monetization', cls:'t1', mins:8, date:'Guide · Updated Nov 2026',
+ title:'Reused Content Rejection: What YouTube Actually Means — and How to Fix It',
+ excerpt:'“Reused content” is the #1 YPP rejection reason, and the most misunderstood. Permission doesn\u2019t save you. Here is what reviewers are really looking for.',
+ body:'<p>Your rejection email says <strong>“reused content.”</strong> Your first thought is probably: <em>“But I have permission / it\u2019s fair use / I edited it.”</em> That is exactly the misunderstanding that keeps channels rejected for months.</p><h2>Reused content is NOT copyright</h2><p>These are two separate systems. Copyright asks: <em>do you have the legal right to use this?</em> The reused content policy asks a different question: <strong>is this channel\u2019s content meaningfully yours?</strong> You can have full permission from the original creator and still be rejected for reused content — YouTube has stated this plainly in its monetization policies.</p><h2>What reviewers flag</h2><ul><li>Compilations of other people\u2019s clips with little or no added value</li><li>Re-uploads of content from TikTok, TV, other channels or games, lightly edited</li><li>Reading text aloud over someone else\u2019s visuals (slideshows, Reddit stories with stock footage)</li><li>“Reaction” videos where you barely react</li><li>The same content posted across many videos or channels</li></ul><h2>What actually fixes it</h2><ol><li><strong>Your voice, your face, your analysis.</strong> Significant original commentary that changes what the viewer gets from the video.</li><li><strong>Transformation.</strong> The original material becomes raw material for something new — a breakdown, a lesson, a critique — not the product itself.</li><li><strong>Consistency.</strong> One transformed video among twenty re-uploads does not fix a channel. Reviewers look at the channel as a whole.</li></ol><p>Before you appeal or reapply, go video by video and honestly sort them: <em>clearly mine / transformed / risky / pure re-upload</em>. Remove or remake the last group. Then — and only then — appeal with a video showing your actual creation process.</p>' + CTA + '<h2>The mistake that wastes your 30 days</h2><p>Reapplying with the same videos and a sadder description. Reviewers re-check the channel, not your intentions. If nothing visible changed, the answer won\u2019t either — and your next wait becomes 90 days instead of 30.</p>'},
+{id:'appeal-or-reapply', cat:'Appeals', cls:'t2', mins:7, date:'Guide · Updated Nov 2026',
+ title:'Appeal in 21 Days or Reapply in 30? The Decision Guide',
+ excerpt:'Choose wrong and you burn months. The simple test that tells you which route your channel should take — plus the exact calendar to plan around.',
+ body:'<p>After a YPP rejection you have two doors. Door one: <strong>appeal within 21 days</strong>. Door two: <strong>fix the channel and reapply after 30 days</strong> (90 days after a later rejection). They are not interchangeable.</p><h2>Appeal if…</h2><ul><li>You believe the reviewer got it wrong, OR you have already fixed the flagged content</li><li>You can film a short appeal video showing your face, your editing process, and what changed</li><li>Your channel, as it stands <em>today</em>, would pass a fresh review</li></ul><h2>Reapply if…</h2><ul><li>The rejection was fair — the risky videos are still up</li><li>You need weeks to remake, re-edit or remove content</li><li>You cannot honestly show an original creation process yet</li></ul><h2>What a strong appeal video contains</h2><ol><li>A brief intro: who you are, what your channel is</li><li>Your process on screen: script, filming, editing timeline</li><li>Specifically what you changed since the rejection</li><li>Examples: 2–3 videos, before and after</li></ol><p>What it should never contain: begging, blaming the algorithm, subscriber counts, or how much money you need. Reviewers assess policy compliance, not hardship.</p>' + CTA + '<h2>Plan your calendar</h2><p>Write down three dates the day the rejection arrives: <strong>day 21</strong> (appeal deadline), <strong>day 30</strong> (first reapply date), and your fix deadline — at least 3 days before whichever route you choose, so nothing is rushed. Missing the 21-day window by one day means the appeal option is gone.</p>'},
+{id:'adsense-step-2', cat:'AdSense', cls:'t3', mins:6, date:'Guide · Updated Nov 2026',
+ title:'AdSense Step 2 Stuck: 7 Checks Before You Panic',
+ excerpt:'Step 2 is where YPP applications quietly die — identity, address, PIN and duplicate accounts. Work through these 7 checks in order.',
+ body:'<p>Step 2 of the YPP application is the AdSense step, and it fails silently more than any other. Before assuming the worst, work through these in order:</p><ol><li><strong>One AdSense account only.</strong> A duplicate account (even an old forgotten one) blocks approval. This is the most common hidden cause.</li><li><strong>Name match.</strong> The name on your AdSense must match your official ID exactly — spelling, order, everything.</li><li><strong>Address you can actually receive post at.</strong> Your PIN is mailed physically. “Near the market” is not an address.</li><li><strong>Identity verification submitted and readable.</strong> Blurry photos of documents get rejected without a clear reason shown.</li><li><strong>PIN entered, or re-requested on time.</strong> You can request a replacement PIN if the first never arrives — don\u2019t just wait.</li><li><strong>No channel/AdSense country mismatch games.</strong> Your AdSense country should be where you genuinely live and can verify.</li><li><strong>Payments profile complete.</strong> Tax and payment details left half-done keep the whole step pending.</li></ol>' + CTA + '<h2>The rule that protects you</h2><p>Nobody legitimate needs your Google password to “fix” Step 2 — not us, not anyone on Fiverr, not a stranger on Telegram. Anyone asking for it is a risk to your channel and your money. Real help is guidance: find the stuck point, clear it yourself.</p>'},
+{id:'inauthentic-content', cat:'Policy', cls:'t4', mins:7, date:'Guide · Updated Nov 2026',
+ title:'Inauthentic Content: The Policy Quietly Rejecting Thousands of Channels',
+ excerpt:'Templated, mass-produced, repetitive — if your videos could have been made by anyone, a reviewer may call them inauthentic. Here\u2019s how to make a format unmistakably yours.',
+ body:'<p>YouTube\u2019s <strong>inauthentic content</strong> policy targets content that feels mass-produced: the same template, the same structure, minimal variation, video after video — content that appears made to farm views rather than made by a creator.</p><h2>Signals reviewers look for</h2><ul><li>Dozens of videos with identical format, script structure and pacing</li><li>Generic AI voice + stock footage with no personal input</li><li>Content that could belong to any channel — no host, no viewpoint, no identity</li><li>Upload patterns that look automated rather than authored</li></ul><h2>How to make a format “yours”</h2><ul><li><strong>A recognisable human presence</strong> — your voice, face, or at minimum your genuine writing and opinions</li><li><strong>Real variation</strong> — different angles, examples from your own experience, responses to your actual audience</li><li><strong>Evidence of effort per video</strong> — research, original examples, your own footage or data</li></ul><p>Efficiency is not the enemy — templates are fine as a starting structure. The problem is when the template <em>is</em> the content. One strong test: if you swapped your channel name with a stranger\u2019s, would viewers notice? If not, a reviewer may not either.</p>' + CTA + '<p><strong>Note:</strong> This matters even more heading into 2027, as automated content floods every niche. Channels with a clear human identity are the ones that survive reviews.</p>'},
+{id:'feb-2027-changes', cat:'Monetization', cls:'t5', mins:5, date:'Guide · Updated Nov 2026',
+ title:'YPP Changes on 1 February 2027: The 8,000-Hour Rule, Explained',
+ excerpt:'From 1 Feb 2027, new applicants need double: 8,000 watch hours or 20M Shorts views. Who is affected, who is safe, and what to do if you\u2019re close to the line now.',
+ body:'<p>Big change coming. For <strong>new applicants</strong> to the YouTube Partner Program, the thresholds double on <strong>1 February 2027</strong>:</p><ul><li><strong>Long-form route:</strong> 1,000 subscribers + <strong>8,000</strong> valid public watch hours in 12 months (up from 4,000)</li><li><strong>Shorts route:</strong> 1,000 subscribers + <strong>20 million</strong> valid Shorts views in 90 days (up from 10 million)</li></ul><h2>Who is NOT affected</h2><p>Channels already in the Partner Program keep their place — this is a change to the entrance, not the membership. If you are monetized today, this deadline is not yours to fear.</p><h2>Who should act now</h2><p>If you are between roughly 3,000–4,000 hours (or 7M–10M Shorts views) and growing, a <strong>clean application before 1 Feb 2027</strong> is worth real planning: check your content risk now, sort your AdSense early, and don\u2019t leave the application to the last week of January.</p>' + CTA + '<p style="font-size:14px;color:var(--muted)"><em>Source: YouTube\u2019s own announcement of the Partner Program changes (August 2026) and the updated YPP eligibility pages in YouTube Help — check YouTube Help for the current wording before you apply.</em></p><h2>The trap to avoid</h2><p>Rushing to apply with risky content just to beat the deadline. A rejection in January puts you on a 30-day reapply clock that lands <em>after</em> the thresholds rise. Apply early <em>and</em> clean — or fix first, even if it means the higher bar. A prepared channel beats a panicked one.</p>'},
+{id:'shorts-diagnosis', cat:'Growth', cls:'t6', mins:6, date:'Guide · Updated Nov 2026',
+ title:'Why Your Shorts Stopped Getting Views: A Diagnosis Checklist',
+ excerpt:'No, you\u2019re probably not shadowbanned. Work through retention, swipe-away rate and format fatigue — the three real causes, in order.',
+ body:'<p>Almost every “my Shorts died” case we see is one of three things. Check them in this order:</p><h2>1. Swipe-away in the first 2 seconds</h2><p>Shorts live or die at the opening frame. If viewers swipe before your point lands, distribution stops. Open on the result, the shock, or the question — never on a logo, a greeting, or “in today\u2019s video…”</p><h2>2. Retention shape</h2><p>In YouTube Studio, look at where the curve drops. A cliff at one moment = one boring or confusing moment. Fix that moment in the next video, not the whole format. A steady slope down = the topic itself isn\u2019t holding people — a content choice problem, not an editing one.</p><h2>3. Format fatigue</h2><p>A format that worked for 30 Shorts often fades because the audience for that exact trick is exhausted — not because YouTube “punished” you. Vary the hook, the setting or the payoff while keeping your niche promise.</p>' + CTA + '<h2>What it almost never is</h2><p>A shadowban. Sudden drops feel personal, but the data above explains nearly every case. Check Analytics before changing everything — one variable at a time, or you\u2019ll never know what fixed it (or broke it).</p>'},
+{id:'claim-vs-strike', cat:'Policy', cls:'t7', mins:6, date:'Guide · Updated Nov 2026',
+ title:'Copyright Claim vs Strike: They Are Not the Same Thing',
+ excerpt:'A claim is a settings change. A strike is a warning on your channel\u2019s record. Mixing them up causes panic — and bad decisions. The calm, correct guide.',
+ body:'<p>Creators use “claim” and “strike” as if they\u2019re the same. They are not, and the difference matters:</p><h2>Content ID claim</h2><ul><li>Automatic — a system matched audio/video to a rights owner\u2019s catalogue</li><li>Usually affects <strong>that video\u2019s</strong> monetization or visibility (the owner may monetize it, block it in some regions, or track it)</li><li><strong>Not</strong> a strike. It does not count against your channel standing</li><li>You can dispute it if you have the rights or a valid basis — don\u2019t dispute out of anger; disputes you lose teach the system nothing good</li></ul><h2>Copyright strike</h2><ul><li>A formal legal takedown request — the video is removed</li><li>Counts against your channel: <strong>three strikes can terminate the channel</strong></li><li>Strikes expire after 90 days if you complete Copyright School and get no more</li><li>Options: wait it out, request a retraction from the claimant, or submit a counter-notification if the removal was mistaken or you have the rights</li></ul>' + CTA + '<h2>The one rule for both</h2><p>Never re-upload removed content, never create a new channel to dodge a strike, and never pay a stranger who promises to “remove strikes instantly.” Work the official process in YouTube Studio — it\u2019s slower, and it\u2019s the only one that\u2019s real.</p>'},
+{id:'pre-application-checklist', cat:'Monetization', cls:'t8', mins:7, date:'Guide · Updated Nov 2026',
+ title:'Before You Hit Apply: The 12-Point Pre-Application Checklist',
+ excerpt:'Your first YPP application is your easiest one. Run this checklist first — thresholds, content risk, AdSense, channel basics — and apply once, cleanly.',
+ body:'<p>Most failed first applications fail on things the creator could have checked in an afternoon. Here is that afternoon, as a checklist:</p><ol><li>Thresholds genuinely met (1,000 subs + 4,000 hrs / 10M Shorts views) with <strong>valid public</strong> watch time</li><li>2-Step Verification on your Google account</li><li>AdSense: one account, your real name, your real address</li><li>No active community guideline strikes</li><li>Every public video passes the “is this meaningfully mine?” test</li><li>No compilation/re-upload risks hiding in old videos (reviewers check the whole channel)</li><li>Titles and thumbnails honestly match video content</li><li>No misleading metadata, tags or “trick” descriptions</li><li>About section and channel identity filled in like a real creator</li><li>Comments/pinned content don\u2019t advertise policy-breaking services</li><li>You live in a country/region where YPP is available</li><li>You can explain, on camera if asked, how you make your videos</li></ol>' + CTA + '<p>Scored yourself honestly and still unsure about two or three items? That is exactly what the $59 Eligibility Check is for — a second pair of expert eyes <em>before</em> YouTube\u2019s reviewer becomes the first.</p>'}
+];
+
+/* BLOG RENDER + FILTER */
+var grid = document.getElementById('postGrid');
+var activeCat = 'all', query = '';
+function renderPosts(){
+  var shown = 0; grid.innerHTML = '';
+  POSTS.forEach(function(p){
+    var okCat = activeCat==='all' || p.cat===activeCat;
+    var okQ = !query || (p.title+' '+p.excerpt+' '+p.cat).toLowerCase().indexOf(query) > -1;
+    if(!okCat || !okQ) return; shown++;
+    var b = document.createElement('button'); b.className='post'; b.setAttribute('aria-label','Read: '+p.title);
+    b.innerHTML = '<div class="thumb '+p.cls+'">'+p.cat+'</div><div class="body"><div class="meta">'+p.date+' · '+p.mins+' min read</div><h3>'+p.title+'</h3><p>'+p.excerpt+'</p><span class="read">Read the guide →</span></div>';
+    b.addEventListener('click', function(){ openPost(p); });
+    grid.appendChild(b);
+  });
+  document.getElementById('noPosts').style.display = shown ? 'none' : 'block';
+}
+document.getElementById('blogSearch').addEventListener('input', function(e){ query = e.target.value.trim().toLowerCase(); renderPosts(); });
+var chips = document.querySelectorAll('.chip');
+chips.forEach(function(c){ c.addEventListener('click', function(){ chips.forEach(function(x){x.classList.remove('on')}); c.classList.add('on'); activeCat = c.getAttribute('data-cat'); renderPosts(); }); });
+renderPosts();
+
+/* READER */
+var reader = document.getElementById('reader');
+function openPost(p){
+  document.getElementById('readerTitle').textContent = p.title;
+  document.getElementById('readerMeta').textContent = p.cat + ' · ' + p.date + ' · ' + p.mins + ' min read · by the YTFixer team';
+  document.getElementById('readerBody').innerHTML = p.body;
+  reader.classList.add('open'); reader.scrollTop = 0; document.body.style.overflow = 'hidden';
+}
+function closePost(){ reader.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('readerBack').addEventListener('click', closePost);
+document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closePost(); closePopup(); } });
+
+/* CHECKER */
+var QUESTIONS = [
+ {t:'Is all of your content filmed, voiced or substantially created by you?', risk:'Reused / inauthentic content is the top rejection reason — content that isn\u2019t meaningfully yours must be fixed or removed before applying.'},
+ {t:'Do any of your videos reuse other creators\u2019 clips, TV, TikTok or movie footage without major original commentary?', risk:'Those videos are your biggest risk. They need real transformation — or removal — before an appeal or application.', invert:true},
+ {t:'Have you ever bought subscribers, views or watch time?', risk:'Purchased engagement violates YouTube policy and can block monetization or end the channel. Stop immediately and never use it again.', invert:true},
+ {t:'Is your AdSense set up with your real name, real address, and only ONE account?', risk:'AdSense problems silently block Step 2: duplicate accounts, name mismatches and unusable addresses are the usual causes.'},
+ {t:'Do you have any active copyright or community guideline strikes?', risk:'Active strikes must expire or be resolved first — applying with one is almost always wasted.', invert:true},
+ {t:'Do your titles and thumbnails honestly match what\u2019s in the video?', risk:'Misleading titles/thumbnails are a policy problem, not just a growth problem. Align them before review.'},
+ {t:'Could you show your creation process on camera — script, filming, editing — if YouTube asked?', risk:'If you can\u2019t demonstrate your process, an appeal will be very hard. Build that evidence as you fix the channel.'},
+ {t:'Have you checked your OLDEST videos for risky content, not just recent ones?', risk:'Reviewers scan the whole channel. Old risky videos reject new applications every week.'}
+];
+var answers = new Array(QUESTIONS.length).fill(null);
+var qWrap = document.getElementById('questions');
+QUESTIONS.forEach(function(q, i){
+  var row = document.createElement('div'); row.className='q';
+  row.innerHTML = '<p>'+(i+1)+'. '+q.t+'</p>';
+  var yn = document.createElement('div'); yn.className='yn';
+  ['Yes','No'].forEach(function(label){
+    var btn = document.createElement('button'); btn.textContent = label; btn.type='button';
+    btn.addEventListener('click', function(){
+      answers[i] = label;
+      yn.querySelectorAll('button').forEach(function(b){ b.classList.remove('sel','good'); });
+      var badAnswer = q.invert ? (label==='Yes') : (label==='No');
+      btn.classList.add('sel'); if(!badAnswer) btn.classList.add('good');
+      updateChecker();
+    });
+    yn.appendChild(btn);
+  });
+  row.appendChild(yn); qWrap.appendChild(row);
+});
+function updateChecker(){
+  var done = answers.filter(function(a){ return a !== null; }).length;
+  document.getElementById('checkProgress').textContent = done + ' of ' + QUESTIONS.length + ' answered';
+  var res = document.getElementById('checkResult');
+  if(done < QUESTIONS.length){ res.style.display='none'; return; }
+  var risks = [];
+  QUESTIONS.forEach(function(q,i){ var bad = q.invert ? answers[i]==='Yes' : answers[i]==='No'; if(bad) risks.push(q.risk); });
+  var pct = Math.round(((QUESTIONS.length - risks.length) / QUESTIONS.length) * 100);
+  var verdict, color;
+  if(risks.length===0){ verdict='Looking clean — apply with confidence'; color='var(--green)'; }
+  else if(risks.length<=2){ verdict='Close — fix these before you apply'; color='var(--amber)'; }
+  else { verdict='Not ready yet — real risks found'; color='var(--red)'; }
+  res.innerHTML = '<h3>'+verdict+'</h3><div class="meter"><i style="width:'+pct+'%;background:'+color+'"></i></div><p><strong>'+pct+'% clean</strong> on this self-check. '+(risks.length ? 'What needs attention:' : 'No risks flagged. Remember: this is a self-check, not YouTube\u2019s decision.')+'</p>' +
+    (risks.length ? '<ul style="padding-left:19px;color:var(--muted);margin:0 0 14px">'+risks.map(function(r){return '<li style="margin-bottom:6px">'+r+'</li>'}).join('')+'</ul>' : '') +
+    '<a class="btn" href="mailto:tanveersattar009@gmail.com?subject=My%20checker%20result%3A%20'+pct+'%25%20clean">✉ Get an expert to verify this — mail the team</a>';
+  res.style.display='block'; res.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+/* POPUP — once per visit, on time OR scroll depth */
+var pop = document.getElementById('popup'), popShown = false;
+function showPopup(){ if(popShown || reader.classList.contains('open')) return; popShown = true; pop.classList.add('open'); document.getElementById('helpFab').style.display='none'; }
+function closePopup(){ pop.classList.remove('open'); document.getElementById('helpFab').style.display='inline-flex'; }
+setTimeout(showPopup, 35000);
+window.addEventListener('scroll', function(){
+  var h = document.documentElement;
+  var depth = (h.scrollTop + h.clientHeight) / h.scrollHeight;
+  if(depth > 0.55) showPopup();
+}, {passive:true});
+document.getElementById('popClose').addEventListener('click', closePopup);
+document.getElementById('popLater').addEventListener('click', closePopup);
+pop.addEventListener('click', function(e){ if(e.target===pop) closePopup(); });
+document.getElementById('helpFab').addEventListener('click', function(){ popShown=false; showPopup(); });
+</script>
+</body>
+</html>
