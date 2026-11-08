@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light dark"/>
+<title>YouTube Shorts Monetization: Why Your Shorts Were Rejected</title>
+<meta name="description" content="YouTube Shorts monetization rejection? Check thresholds, reused content and inauthentic content first. A plain-English diagnosis, fix steps and checklist."/>
+<link rel="canonical" href="https://freebothub.github.io/ytfixer/youtube-shorts-monetization-diagnosis.html"/>
+<meta property="og:title" content="YouTube Shorts Monetization: Why Your Shorts Were Rejected"/>
+<meta property="og:description" content="YouTube Shorts monetization rejection? Check thresholds, reused content and inauthentic content first. A plain-English diagnosis, fix steps and checklist."/>
+<meta property="og:url" content="https://freebothub.github.io/ytfixer/youtube-shorts-monetization-diagnosis.html"/>
+<meta property="og:type" content="article"/>
+<link rel="icon" href="data:,"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --surface2:#efefec; --ink:#16130f; --muted:#5c564e; --line:#ddd9d2;
+  --red:#e10600; --red-dark:#b00500; --red-soft:#fdeceb; --green:#177245; --green-soft:#e6f4ec;
+  --amber:#9a6a00; --amber-soft:#fdf3d7; --radius:14px; --shadow:0 18px 50px rgba(22,19,15,.14);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121110; --surface:#1c1a18; --surface2:#262320; --ink:#f3efe9; --muted:#b3aca2; --line:#35312d;
+  --red:#ff3b30; --red-dark:#ff6b64; --red-soft:#3a1714; --green:#4cc38a; --green-soft:#173527; --amber:#f5c04a; --amber-soft:#3a2f10; --shadow:0 18px 50px rgba(0,0,0,.5);}
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit} .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* NAV */
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;padding:13px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;text-decoration:none;letter-spacing:-.03em}
+.logo span{color:var(--red)}
+.nav nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav nav a{text-decoration:none;font-weight:600;font-size:14.5px;padding:8px 11px;border-radius:999px;color:var(--muted)}
+.nav nav a:hover{color:var(--ink);background:var(--surface2)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff !important;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;border:1px solid var(--red);cursor:pointer;font-size:15px}
+.btn:hover{background:var(--red-dark)}
+.btn.ghost{background:transparent;color:var(--ink) !important;border-color:var(--line)}
+.btn.ghost:hover{background:var(--surface2)}
+.btn.small{padding:8px 15px;font-size:14px}
+@media(max-width:760px){.nav nav a:not(.keep){display:none}}
+
+/* HERO */
+.hero{padding:56px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--red-soft);color:var(--red);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.hero h1{font-size:clamp(38px,6vw,64px);margin:16px 0 14px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:56ch;margin:0 0 22px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:34px 0 8px}
+@media(max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px}
+.fact b{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;display:block;line-height:1}
+.fact span{font-size:12.5px;color:var(--muted);font-weight:600}
+.diag{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.diag-head{background:var(--ink);color:var(--bg);padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.diag-head b{font-family:"Bricolage Grotesque",sans-serif}
+.diag-head span{font-size:11px;font-weight:700;background:var(--red);color:#fff;padding:3px 9px;border-radius:999px;letter-spacing:.06em}
+.diag-body{padding:18px}
+.diag-row{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.diag-row:last-of-type{border-bottom:0}
+.dot{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.dot.bad{background:var(--red-soft);color:var(--red)} .dot.ok{background:var(--green-soft);color:var(--green)} .dot.warn{background:var(--amber-soft);color:var(--amber)}
+.diag-note{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* SECTIONS */
+section{padding:58px 0}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+h2.title{font-size:clamp(28px,4vw,40px);margin:8px 0 10px;font-weight:800}
+.sub{color:var(--muted);max-width:68ch;margin:0 0 26px;font-size:16.5px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+.card .score{float:right;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;background:var(--surface2);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14.5px}
+.card a.more{font-weight:700;color:var(--red);text-decoration:none;font-size:14.5px}
+.honest{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);padding:18px 22px;display:flex;gap:16px;flex-wrap:wrap}
+.honest b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.honest p{margin:4px 0 0;color:var(--muted);font-size:14.5px;max-width:75ch}
+
+/* CHECKER */
+.checker{background:var(--ink);color:var(--bg);border-radius:22px;padding:30px}
+.checker h2{color:var(--bg);margin-top:0}
+.checker .sub{color:color-mix(in srgb, var(--bg) 72%, transparent)}
+.q{padding:15px 0;border-top:1px solid color-mix(in srgb, var(--bg) 18%, transparent);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.q p{margin:0;font-weight:600;font-size:15.5px;max-width:62ch}
+.yn{display:flex;gap:8px;flex:none}
+.yn button{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb, var(--bg) 40%, transparent);padding:8px 18px;border-radius:999px;font-weight:700;cursor:pointer;font-size:14px}
+.yn button.sel{background:var(--red);border-color:var(--red);color:#fff}
+.yn button.sel.good{background:var(--green);border-color:var(--green)}
+#checkResult{display:none;margin-top:22px;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:22px}
+#checkResult h3{margin:0 0 6px;font-size:22px}
+#checkResult p{color:var(--muted);margin:0 0 14px}
+.meter{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden;margin:10px 0 16px}
+.meter i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .5s}
+.progress-note{font-size:13.5px;opacity:.75;margin-top:14px}
+
+/* TIMELINE */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tl{grid-template-columns:1fr}}
+.tl .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tl .step b{font-family:"Bricolage Grotesque",sans-serif;font-size:26px;color:var(--red);display:block}
+.tl .step h3{margin:4px 0 6px;font-size:17px}
+.tl .step p{margin:0;color:var(--muted);font-size:14px}
+
+/* BLOG */
+.blog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.blog-tools input{flex:1;min-width:210px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:15px;font-family:inherit}
+.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600;cursor:pointer;font-size:13.5px;color:var(--muted);font-family:inherit}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:left;font-family:inherit;color:inherit;padding:0;width:100%}
+.post:hover{border-color:var(--red)}
+.post .thumb{height:118px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;line-height:1.15}
+.post .body{padding:17px 18px 19px;display:flex;flex-direction:column;gap:7px;flex:1}
+.post .meta{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--red)}
+.post h3{margin:0;font-size:19px}
+.post p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.post .read{font-weight:700;font-size:14px;color:var(--red)}
+.t1{background:#8f0400}.t2{background:#1d4d33}.t3{background:#7a4d00}.t4{background:#20304d}.t5{background:#4d2050}.t6{background:#0f4d4a}.t7{background:#5c1a1a}.t8{background:#333d12}
+
+/* ARTICLE READER */
+#reader{display:none;position:fixed;inset:0;z-index:90;background:var(--bg);overflow-y:auto}
+#reader.open{display:block}
+.reader-wrap{max-width:760px;margin:0 auto;padding:28px 20px 90px}
+.reader-wrap .back{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink)}
+.reader-wrap h1{font-size:clamp(30px,5vw,44px);margin:22px 0 8px}
+.reader-meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.article-body{font-size:17px}
+.article-body h2{font-size:24px;margin:30px 0 8px}
+.article-body p{margin:0 0 15px}
+.article-body ul,.article-body ol{margin:0 0 15px;padding-left:22px}
+.article-body li{margin-bottom:7px}
+.article-body strong{font-weight:700}
+.cta-box{background:var(--red-soft);border:1px solid color-mix(in srgb, var(--red) 35%, transparent);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.cta-box h3{margin:0 0 6px;font-size:20px}
+.cta-box p{margin:0 0 13px !important;color:var(--muted);font-size:15px}
+
+/* PRICING */
+.price-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.price-card.hot{border:2px solid var(--red)}
+.price-card .amt{font-family:"Bricolage Grotesque",sans-serif;font-size:42px;font-weight:800}
+.price-card .amt small{font-size:15px;color:var(--muted);font-family:"Public Sans",sans-serif;font-weight:600}
+.price-card ul{padding-left:19px;color:var(--muted);font-size:14.5px;flex:1}
+.price-card .tag{align-self:flex-start;background:var(--red);color:#fff;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;letter-spacing:.05em;margin-bottom:10px}
+
+/* FAQ */
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;font-size:16px}
+details p{color:var(--muted);margin:10px 0 2px;font-size:15px}
+
+/* POPUP */
+#popup{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,8,6,.55);padding:18px;align-items:flex-end;justify-content:center}
+@media(min-width:700px){#popup{align-items:center}}
+#popup.open{display:flex}
+.pop{background:var(--surface);color:var(--ink);border-radius:20px;max-width:520px;width:100%;padding:28px;box-shadow:var(--shadow);position:relative;max-height:88vh;overflow-y:auto}
+.pop .x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);cursor:pointer;font-size:16px;color:var(--ink)}
+.pop h3{font-size:26px;margin:6px 0 8px;padding-right:30px}
+.pop p{color:var(--muted);margin:0 0 14px;font-size:15px}
+.pop ul{padding-left:19px;color:var(--muted);font-size:14.5px;margin:0 0 18px}
+.pop .row{display:flex;gap:10px;flex-wrap:wrap}
+.pop .later{background:none;border:0;color:var(--muted);font-weight:600;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:14px;padding:11px 4px}
+#helpFab{position:fixed;right:16px;bottom:16px;z-index:70;display:none}
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px;margin-bottom:20px}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer a{color:var(--muted)}
+.final{background:var(--red);color:#fff;border-radius:22px;padding:36px;text-align:center}
+.final h2{color:#fff;margin:0 0 8px;font-size:clamp(26px,4vw,38px)}
+.final p{opacity:.92;margin:0 auto 20px;max-width:56ch}
+.final .btn{background:#fff;color:var(--red) !important;border-color:#fff}
+</style>
+<style>
+.article{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+.article h1{font-size:clamp(30px,5vw,44px);margin:22px 0 10px}
+.article h2{font-size:26px;margin:34px 0 10px}
+.article h3{font-size:20px;margin:24px 0 8px}
+.article p{margin:0 0 15px;font-size:17px}
+.article ul,.article ol{margin:0 0 15px;padding-left:22px;font-size:17px}
+.article li{margin-bottom:7px}
+.breadcrumb{font-size:14px;color:var(--muted);margin-top:18px}
+.breadcrumb a{color:var(--red);font-weight:700;text-decoration:none}
+.cta-box{background:var(--red-soft);border:1px solid color-mix(in srgb, var(--red) 35%, transparent);border-radius:var(--radius);padding:20px 22px;margin:28px 0}
+.cta-box h3{margin:0 0 6px;font-size:20px}
+.cta-box p{margin:0 0 13px !important;color:var(--muted);font-size:15px}
+header{background:#16130f;color:#f7f7f5;border-bottom:1px solid #16130f}
+header .logo{color:#f7f7f5}
+header .nav nav a{color:#cfc9c0}
+header .nav nav a:hover{color:#fff;background:#2a2724}
+@media (prefers-color-scheme: dark){header{background:#000;color:#f3efe9}}
+table{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:15px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+th{background:var(--surface2)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">YT<span>Fixer</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="youtube-monetization-requirements-2027.html">2027 Requirements</a>
+    <a href="youtube-shorts-monetization-diagnosis.html">Shorts Diagnosis</a>
+    <a class="btn small keep" href="mailto:tanveersattar009@gmail.com?subject=I%20need%20help%20with%20my%20YouTube%20channel">&#9993; Mail the Team</a>
+  </nav>
+</div></header>
+<main class="wrap article">
+<p class="breadcrumb"><a href="index.html">YTFixer home</a> &rsaquo; Shorts Diagnosis</p>
+<h1>YouTube Shorts Monetization: Why Your Shorts Channel Was Rejected</h1>
+<p style="color:var(--muted);font-size:14px">YTFixer Team &mdash; 8 November 2026 &middot; Monetization guide</p>
+
+<p>Your Shorts were getting views. Then you applied for monetization, and YouTube said no. Or you have not applied yet, because the numbers in YouTube Studio do not add up the way you expected. Why was a Shorts channel rejected, and what actually needs to change before the next application?</p>
+<p>This guide is a monetization diagnosis for Shorts channels. A Short that stops getting views and a Shorts channel that fails a monetization review are different problems, and this article keeps them separate. The reasons it covers are reused content, inauthentic content, and thresholds that were not genuinely met.</p>
+<h2>First, separate two different problems</h2>
+<p>The first problem is views. A Short can stop being shown because viewers swipe away in the first two seconds, because retention drops at one moment, or because the format has tired out its audience. Those are distribution problems, not a monetization rejection reason. The second problem is the monetization review: YouTube checks your thresholds and your monetization policies, looking at your whole channel.</p>
+<h2>Check 1: did you genuinely meet the thresholds?</h2>
+<p>A Shorts channel needs 1,000 subscribers plus 10 million valid public Shorts views in the last 90 days. From 1 February 2027, new applicants need 20 million instead, with subscribers unchanged at 1,000. Alternatively, a channel can qualify through the long-form route: 1,000 subscribers plus 4,000 valid public watch hours in 12 months now, or 8,000 hours from 1 February 2027. You need one route, not both.</p>
+<p>Three details catch Shorts creators out. The first is the 90-day window: Shorts views from more than 90 days ago do not count towards the Shorts route, however large they were. The second is the word valid: only valid public Shorts views count. Check your figures in YouTube Studio on the day you plan to apply, write them down with the date, and look at the trend, not just the total. Our guide to the <a href="youtube-monetization-requirements-2027.html">2027 monetization requirements</a> explains both routes in full.</p>
+<h2>Check 2: reused content in Shorts</h2>
+<p>Reused content is the most misunderstood rejection reason, and it applies to Shorts just as it applies to long-form video. The policy asks whether your channel's content is meaningfully yours, and it is separate from copyright. Reused content applies channel-wide, even with permission: permission answers the copyright question, but it does not make the content yours for monetization.</p>
+<p>A compilation of other people's clips with little added value, a re-upload with light editing, or a Short that is mostly someone else's video can all be flagged. Shorts make this trap easy, because the format rewards speed. Reviewers look at the channel as a whole, so sort each Short honestly: if you removed the borrowed material, what would be left that is yours? Our <a href="reused-content-rejection-fix.html">reused content rejection guide</a> walks through the same test.</p>
+<h2>Check 3: inauthentic content in Shorts</h2>
+<p>The second policy reason to check is inauthentic content. This policy targets content that feels mass-produced: the same template, the same structure, minimal variation, video after video. It was renamed on 15 July 2025, and it is aimed at repetitious or mass-produced content that appears made to farm views rather than made by a creator.</p>
+<p>Ask a plain test: if you swapped your channel name with a stranger's, would viewers notice? If not, a reviewer may not notice either. Add a recognisable human presence &mdash; your own voice, your face, or your genuine writing and opinions &mdash; and real variation from one Short to the next. Read the full <a href="inauthentic-content-rejection-fix.html">inauthentic content rejection guide</a>.</p>
+<h2>Check 4: the viewing problems that confuse the diagnosis</h2>
+<p>Many Shorts creators arrive at a monetization problem convinced they have been shadowbanned. In almost every case, the viewing problem is one of three ordinary causes, and checking them in YouTube Studio will tell you which one it is. Change one variable at a time.</p>
+<h3>Swipe-away in the first two seconds</h3>
+<p>Shorts live or die at the opening frame. If viewers swipe before your point lands, distribution stops. Open on the result, the question, or the surprising moment &mdash; never on a logo, a greeting, or a slow introduction.</p>
+<h3>Retention shape</h3>
+<p>In YouTube Studio, look at where the retention curve drops. A cliff at one moment means one boring moment, so fix that moment, not the whole format. A steady slope down means the topic itself is not holding people.</p>
+<h3>Format fatigue</h3>
+<p>A format that worked for 30 Shorts often fades because the audience for that exact trick is exhausted, not because YouTube punished you. Vary the hook, the setting, or the payoff while keeping your niche promise.</p>
+
+<h2>Step-by-step: fix a rejected Shorts channel</h2>
+<ol>
+<li><strong>Read the rejection email word for word.</strong> Write down the exact policy it names and the date it arrived.</li>
+<li><strong>Write down your three dates:</strong> 21 days to appeal, 30 days to reapply after a first rejection, 90 days after later rejections or a failed appeal.</li>
+<li><strong>Check your thresholds in YouTube Studio:</strong> subscribers, valid public Shorts views for 90 days, and valid public watch hours for 12 months.</li>
+<li><strong>Audit every public Short for reused content.</strong> Sort each into clearly mine, transformed, risky, or pure re-upload. Remove or remake the last group.</li>
+<li><strong>Audit your format for inauthentic content.</strong> Add your own voice, viewpoint, examples, or footage, and make several new Shorts that are recognisably yours.</li>
+<li><strong>Decide: appeal or reapply.</strong> Appeal within 21 days only if you have already fixed the flagged content and can show your creation process on camera. Our <a href="youtube-monetization-appeal-vs-reapply.html">appeal vs reapply guide</a> explains the test.</li>
+<li><strong>Fix viewing problems one at a time:</strong> strengthen the opening two seconds, fix the retention drop, and vary a tired format.</li>
+<li><strong>Sort AdSense before you reapply.</strong> One AdSense account per payee, created only in YouTube Studio, and you can change the linked account only once per 32 days. Never share your password. Our <a href="adsense-step-2-stuck-fix.html">AdSense Step 2 guide</a> covers the checks in order.</li>
+<li><strong>Reapply only when the channel would pass today.</strong> A rushed reapplication that fails moves your next wait to 90 days.</li>
+</ol>
+<h2>Checklist: before you appeal or reapply</h2>
+<ul>
+<li>Rejection email read, policy named, 21-day appeal deadline written down</li>
+<li>1,000 subscribers, plus 10 million valid public Shorts views in 90 days, or 4,000 valid public watch hours in 12 months, checked today</li>
+<li>You know the figures rise to 20 million Shorts views or 8,000 hours for new applicants from 1 February 2027</li>
+<li>Every public Short passes the test: is this meaningfully mine?</li>
+<li>No compilation or re-upload Shorts left on the channel, even ones you had permission to use</li>
+<li>Your format is not a repeated template with minimal variation</li>
+<li>Your opening two seconds give a viewer a reason not to swipe</li>
+<li>One AdSense account only, created in YouTube Studio, with your real name and address</li>
+<li>No active strikes &mdash; a Content ID claim is not a strike, three strikes in 90 days can lead to termination, and strikes expire after 90 days</li>
+<li>You can show on camera how you make your Shorts, if you choose to appeal</li>
+</ul>
+<h2>What not to do after a Shorts rejection</h2>
+<p>Do not re-upload the same Shorts and hope for a different result. Reviewers re-check the channel, not your intentions. Do not buy subscribers, views, or watch time: those break YouTube's policies and can get a channel terminated. Do not pay a stranger who promises to remove a rejection or a strike instantly. Work the official process in YouTube Studio.</p>
+
+<h2>Frequently asked questions</h2>
+<details><summary>Why was my Shorts channel rejected for monetization?</summary><p>The verified reasons covered here are reused content, inauthentic content, and thresholds not genuinely met. Reused content means your Shorts are not meaningfully yours, even with permission. Inauthentic content means your Shorts look repetitious or mass-produced. Read your rejection email to see which policy it names.</p></details>
+<details><summary>Do Shorts views count towards monetization?</summary><p>Yes, through the Shorts route: 1,000 subscribers plus 10 million valid public Shorts views in the last 90 days. From 1 February 2027, new applicants need 20 million instead. Only valid public views inside the 90-day window count.</p></details>
+<details><summary>I had permission to use the clips in my Shorts. Why is that reused content?</summary><p>Because reused content is separate from copyright. Permission answers the copyright question. It does not make the content yours for monetization: YouTube wants significant original commentary, transformation, or educational value added by you, and reused content applies channel-wide even with permission.</p></details>
+<details><summary>Should I appeal or wait and reapply?</summary><p>Appeal within 21 days only if you have already fixed the flagged content and can show your creation process on camera. Reapply after 30 days if the channel still needs real changes. A failed appeal leaves you on the 30-day, then 90-day, clock.</p></details>
+<details><summary>Am I shadowbanned? My Shorts views suddenly dropped.</summary><p>A sudden drop usually has an ordinary cause: viewers swiping away in the first two seconds, a retention drop at one moment, or format fatigue. Check those three in YouTube Studio before assuming a ban, and change one variable at a time.</p></details>
+<h2>What to do next</h2>
+<p>Start today with the rejection email and YouTube Studio open side by side. Write down the policy named, the date, your 21-day appeal deadline, and your current subscribers, 90-day Shorts views, and 12-month watch hours. Then audit your Shorts for reused content and your format for inauthentic content.</p>
+<p>If you are close to the current thresholds and your content is clean, read the <a href="youtube-monetization-requirements-2027.html">2027 requirements guide</a> and plan a careful application before 1 February 2027, when the Shorts bar doubles to 20 million views. If your Shorts need real work, use the <a href="youtube-monetization-pre-application-checklist.html">pre-application checklist</a> and the <a href="youtube-monetization-appeal-vs-reapply.html">appeal vs reapply guide</a>. No one can guarantee YouTube will accept you &mdash; only YouTube decides.</p>
+<p><em>YTFixer Team &mdash; 8 November 2026</em></p>
+<p>Related guides: <a href="youtube-monetization-requirements-2027.html">Monetization Requirements 2027</a> &middot; <a href="reused-content-rejection-fix.html">Reused Content Rejection Fix</a> &middot; <a href="inauthentic-content-rejection-fix.html">Inauthentic Content Rejection Fix</a> &middot; <a href="youtube-monetization-appeal-vs-reapply.html">Appeal vs Reapply</a> &middot; <a href="adsense-step-2-stuck-fix.html">AdSense Step 2 Stuck Fix</a></p>
+
+<div class="cta-box"><h3>Want an expert YouTube team to look at your channel?</h3><p>Guides fix the common cases. If yours is different &mdash; or your appeal window is closing &mdash; mail us your channel link and rejection message for a straight, no-obligation diagnosis. We never ask for your password.</p><a class="btn" href="mailto:tanveersattar009@gmail.com?subject=Please%20review%20my%20YouTube%20channel">&#9993; Mail us: tanveersattar009@gmail.com</a></div>
+<p><a href="index.html">&larr; Back to YTFixer home</a></p>
+</main>
+<footer><div class="wrap">
+  <p>YTFixer is not affiliated with YouTube or Google. YTFixer is an independent service and is not affiliated with, endorsed by, or connected to YouTube or Google. Policy summaries on this site are guidance based on YouTube's published policies at the time of writing &mdash; always check the current policy in YouTube Studio / YouTube Help. No service can guarantee acceptance into the YouTube Partner Program.</p>
+  <p><a href="index.html">Back to YTFixer home</a> &middot; Contact: <a href="mailto:tanveersattar009@gmail.com">tanveersattar009@gmail.com</a></p>
+</div></footer>
+</body>
+</html>
