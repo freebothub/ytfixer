@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://freebothub.github.io/ytfixer/</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://freebothub.github.io/ytfixer/</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/reused-content-rejection-fix.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/youtube-monetization-appeal-vs-reapply.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/adsense-step-2-stuck-fix.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/inauthentic-content-rejection-fix.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/youtube-monetization-requirements-2027.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/youtube-shorts-monetization-diagnosis.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/youtube-copyright-claim-vs-strike.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://freebothub.github.io/ytfixer/youtube-monetization-pre-application-checklist.html</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
